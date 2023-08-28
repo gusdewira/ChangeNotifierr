@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => LoginModel()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Change Notifier',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,

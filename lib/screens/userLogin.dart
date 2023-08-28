@@ -58,54 +58,45 @@ class _UserLoginState extends State<UserLogin> {
           'Halaman Login',
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(height: 16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'Selamat Datang Pada Halaman Login',
+                style: TextStyle(
+                  fontSize: 24.0,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
               ),
-              child: TextField(
+              const SizedBox(height: 16.0),
+              TextField(
                 controller: emailController,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
-                  labelText: 'Email',
-                  hintStyle: TextStyle(
-                      color: Colors.black12, fontWeight: FontWeight.bold),
+                  labelText: 'Username',
+                  border: OutlineInputBorder(),
                 ),
               ),
-            ),
-            SizedBox(height: 16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
+              const SizedBox(height: 10.0),
+              TextField(
                 controller: passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
                   labelText: 'Password',
-                  hintStyle: TextStyle(
-                      color: Colors.black12, fontWeight: FontWeight.bold),
+                  border: OutlineInputBorder(),
                 ),
               ),
-            ),
-            SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () {
-                _performLogin();
-              },
-              child: Text('Login'),
-            ),
-          ],
+              const SizedBox(height: 24.0),
+              ElevatedButton(
+                onPressed: _performLogin,
+                child: Text('Login'),
+              ),
+            ],
+          ),
         ),
       ),
     );
