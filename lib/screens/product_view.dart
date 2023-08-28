@@ -87,7 +87,7 @@ class ProductListScreen extends StatelessWidget {
                                           productProvider.updateProduct(
                                             product.id!,
                                             value,
-                                          ); // Update product
+                                          ); // Update
                                         }
                                       });
                                     },
@@ -111,7 +111,7 @@ class ProductListScreen extends StatelessWidget {
                                               TextButton(
                                                 onPressed: () {
                                                   Navigator.pop(
-                                                      context); // Close the dialog
+                                                      context); 
                                                 },
                                                 child: Text('Batal'),
                                               ),
@@ -119,9 +119,9 @@ class ProductListScreen extends StatelessWidget {
                                                 onPressed: () {
                                                   productProvider.deleteProduct(
                                                     product.id!,
-                                                  ); // Delete product
+                                                  ); //delete
                                                   Navigator.pop(
-                                                      context); // Close the dialog
+                                                      context);
                                                 },
                                                 child: Text('Hapus'),
                                               ),
@@ -190,7 +190,7 @@ class _FormProductState extends State<FormProduct> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
+    /// ignore: unused_local_variable
     final productProvider = Provider.of<ProductProvider>(context);
 
     return Scaffold(
